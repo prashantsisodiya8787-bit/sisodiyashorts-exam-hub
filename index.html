@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#123a72" />
+  <meta name="description" content="SisodiyaShorts Exam Hub - सरकारी परीक्षा तैयारी के लिए फ्री Quiz और Mock Test" />
+  <title>SisodiyaShorts Exam Hub</title>
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="होम" data-page="home">
+        <span class="brand-mark">SS</span>
+        <span><strong>SisodiyaShorts</strong><small>EXAM HUB</small></span>
+      </a>
+      <button class="icon-button" id="themeToggle" aria-label="थीम बदलें" title="थीम बदलें">☼</button>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">आपकी तैयारी, आपकी रफ्तार</span>
+          <h1>सरकारी परीक्षा की तैयारी<br><em>अब आसान बनाएं।</em></h1>
+          <p>Quiz लगाएँ, Mock Test दें और अपनी तैयारी का स्कोर देखें — बिल्कुल फ्री।</p>
+          <button class="primary-button" data-action="start-daily">आज का Quiz शुरू करें <span>→</span></button>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-circle"></div><div class="art-paper"><span>EXAM</span><b>✓</b><i></i><i></i><i></i></div>
+          <div class="art-star">✦</div><div class="art-pill">FREE PRACTICE</div>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="आपकी प्रगति">
+        <article class="stat-card"><span class="stat-icon violet">▤</span><div><strong id="statAttempts">0</strong><small>Quiz दिए</small></div></article>
+        <article class="stat-card"><span class="stat-icon mint">✓</span><div><strong id="statAccuracy">—</strong><small>औसत सटीकता</small></div></article>
+        <article class="stat-card"><span class="stat-icon amber">☆</span><div><strong id="statSaved">0</strong><small>Saved प्रश्न</small></div></article>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading"><div><span class="eyebrow">अपना लक्ष्य चुनें</span><h2>परीक्षा के अनुसार तैयारी</h2></div><span class="section-count">03 EXAMS</span></div>
+        <div class="exam-grid" id="examGrid"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-heading"><div><span class="eyebrow">आज से अभ्यास करें</span><h2>Practice Zone</h2></div></div>
+        <div class="practice-grid">
+          <button class="practice-card" data-action="open-quiz"><span class="practice-icon blue">✎</span><strong>Topic-wise Quiz</strong><small>विषय के अनुसार प्रश्न हल करें</small><span class="card-arrow">↗</span></button>
+          <button class="practice-card" data-action="open-mock"><span class="practice-icon orange">◷</span><strong>Mock Test</strong><small>समय के साथ टेस्ट का अभ्यास</small><span class="card-arrow">↗</span></button>
+          <button class="practice-card" data-action="open-papers"><span class="practice-icon green">▤</span><strong>Previous Papers</strong><small>पेपर और उत्तर-कुंजी खोजें</small><span class="card-arrow">↗</span></button>
+          <button class="practice-card" data-action="open-bookmarks"><span class="practice-icon purple">☆</span><strong>Saved Questions</strong><small>अपने सेव किए प्रश्न देखें</small><span class="card-arrow">↗</span></button>
+        </div>
+      </section>
+      <section class="notice"><span>ⓘ</span><p><strong>ध्यान दें:</strong> इस शुरुआती वर्जन में दिए गए प्रश्न अभ्यास के लिए demo questions हैं, आधिकारिक Previous Year Questions नहीं। असली PYQ स्रोत सत्यापित करने के बाद जोड़े जाएँगे।</p></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="मुख्य नेविगेशन">
+      <button class="nav-item active" data-page="home"><span>⌂</span><small>होम</small></button>
+      <button class="nav-item" data-page="papers"><span>▤</span><small>पेपर</small></button>
+      <button class="nav-item" data-page="quiz"><span>✎</span><small>Quiz</small></button>
+      <button class="nav-item" data-page="mock"><span>◷</span><small>Mock Test</small></button>
+      <button class="nav-item" data-page="profile"><span>♙</span><small>प्रगति</small></button>
+    </nav>
+  </div>
+  <div id="modalRoot"></div>
+  <script src="./app.js"></script>
+</body>
+</html>
